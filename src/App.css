@@ -107,7 +107,7 @@
 }
 
 .buttons {
-  width: 50%;
+  width: 75%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -119,4 +119,8 @@
 .awayButtons__fieldGoal {
   margin: 1rem;
   border-radius: 4px;
+}
+.quarterButton {
+  border-radius: 4px;
+  margin: 1rem;
 }

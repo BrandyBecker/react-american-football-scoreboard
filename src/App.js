@@ -14,8 +14,15 @@ function App() {
   const [awayScore, setAwayScore] = useState(0);
   console.log(useState(0));
 
-  const [quarter, setQuarter] = useState(0);
+  const [quarter, setQuarter] = useState(1);
   console.log(useState(0));
+
+  const quarterSet = () => {
+    setQuarter(quarter < 4 ? quarter + 1 : quarter - 3);
+    {
+      /* is quarter lessthan 4? if so, add 1 to quarter. if not, sub 3 to quarter . after 4, resets to 1*/
+    }
+  };
 
   //------------------------------------------------------------------------------------------------------------------------------------
 
@@ -36,7 +43,10 @@ function App() {
             <div className="away__score">{awayScore}</div>
           </div>
         </div>
-        <BottomRow />
+        {/*-----------------------------------------------------------------------------------------------------------------------------------*/}
+        <BottomRow quarter={quarter} />
+        {/*  assigning var the state of quarter and passing it to BottomRow  */}
+        {/*-----------------------------------------------------------------------------------------------------------------------------------*/}
       </section>
       <section className="buttons">
         <div className="homeButtons">
@@ -67,6 +77,11 @@ function App() {
             onClick={() => setAwayScore(awayScore + 3)}
           >
             Away Field Goal
+          </button>
+        </div>
+        <div className="bottomRowButtons">
+          <button className="quarterButton" onClick={quarterSet}>
+            Add Quarter
           </button>
         </div>
       </section>
