@@ -41,7 +41,7 @@ function App() {
       <section className="scoreboard">
         <div className="topRow">
           <div className="home">
-            <h2 className="home__name">Lions</h2>
+            <h2 className="home__name borderOnText">Lions</h2>
 
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
 
@@ -49,7 +49,7 @@ function App() {
           </div>
           <div className="timer">00:03</div>
           <div className="away">
-            <h2 className="away__name">Tigers</h2>
+            <h2 className="away__name borderOnText">Tigers</h2>
             <div className="away__score">{awayScore}</div>
           </div>
         </div>
@@ -65,14 +65,14 @@ function App() {
             className="homeButtons__touchdown"
             onClick={() => setHomeScore(homeScore + 7)}
           >
-            Home Touchdown
+            Home Touchdown : +7
           </button>
 
           <button
             className="homeButtons__fieldGoal"
             onClick={() => setHomeScore(homeScore + 3)}
           >
-            Home Field Goal
+            Home Field Goal : +3
           </button>
         </div>
         <div className="awayButtons">
@@ -80,21 +80,21 @@ function App() {
             className="awayButtons__touchdown"
             onClick={() => setAwayScore(awayScore + 7)}
           >
-            Away Touchdown
+            Away Touchdown : +7
           </button>
           <button
             className="awayButtons__fieldGoal"
             onClick={() => setAwayScore(awayScore + 3)}
           >
-            Away Field Goal
+            Away Field Goal : +3
           </button>
         </div>
         <div className="bottomRowButtons">
           <button className="quarterButton" onClick={quarterSet}>
-            Add Quarter
+            Add Quarter : +1
           </button>
           <button className="ballOnButton" onClick={ballOnSet}>
-            Add Ball On
+            Add Ball On : +1
           </button>
         </div>
       </section>
