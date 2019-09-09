@@ -55,7 +55,7 @@ function App() {
         </div>
         {/*-----------------------------------------------------------------------------------------------------------------------------------*/}
         <BottomRow quarter={quarter} ballOn={ballOn} />
-        {/*  assigning var the state of quarter and passing it to BottomRow  */}
+        {/*  assigning var the state of quarter and passing it to BottomRow.  */}
         {/*-----------------------------------------------------------------------------------------------------------------------------------*/}
       </section>
       <section className="buttons">
