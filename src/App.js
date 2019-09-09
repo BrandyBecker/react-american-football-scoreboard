@@ -24,6 +24,16 @@ function App() {
     }
   };
 
+  const [ballOn, setBallOn] = useState(1);
+  console.log(useState(0));
+
+  const ballOnSet = () => {
+    setBallOn(ballOn < 50 ? ballOn + 1 : ballOn - 49);
+    {
+      /* is ballOn less than 50? if so, add 1 to ballOn. if not, sub 49 to ballon. after 50, reset to 1 */
+    }
+  };
+
   //------------------------------------------------------------------------------------------------------------------------------------
 
   return (
@@ -44,7 +54,7 @@ function App() {
           </div>
         </div>
         {/*-----------------------------------------------------------------------------------------------------------------------------------*/}
-        <BottomRow quarter={quarter} />
+        <BottomRow quarter={quarter} ballOn={ballOn} />
         {/*  assigning var the state of quarter and passing it to BottomRow  */}
         {/*-----------------------------------------------------------------------------------------------------------------------------------*/}
       </section>
@@ -82,6 +92,9 @@ function App() {
         <div className="bottomRowButtons">
           <button className="quarterButton" onClick={quarterSet}>
             Add Quarter
+          </button>
+          <button className="ballOnButton" onClick={ballOnSet}>
+            Add Ball On
           </button>
         </div>
       </section>
